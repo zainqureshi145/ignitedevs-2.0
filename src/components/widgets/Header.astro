@@ -1,7 +1,8 @@
 ---
 import { Icon } from 'astro-icon';
 import Logo from '~/components/Logo.astro';
-import ToggleTheme from '~/components/common/ToggleTheme.astro';
+// import ToggleTheme from '~/components/common/ToggleTheme.astro';
+import ThemeToggle from '../common/ThemeToggle';
 import ToggleMenu from '~/components/common/ToggleMenu.astro';
 
 import { getHomePermalink, getAsset } from '~/utils/permalinks';
@@ -54,7 +55,9 @@ const {
         <!-- <img class="h-[90px] w-[auto]" src="src/assets/logos/ignite-logo-3.png"/> -->
       </a>
       <div class="flex items-center md:hidden">
-        {showToggleTheme && <ToggleTheme />}
+        <!-- {showToggleTheme && <ToggleTheme />}
+        <ToggleMenu /> -->
+        {showToggleTheme && <ThemeToggle client:load/>}
         <ToggleMenu />
       </div>
     </div>
@@ -99,7 +102,12 @@ const {
     </nav>
     <div class:list={[{ 'ml-auto': position === 'left' }, 'md:self-center flex items-center md:mb-0']}>
       <div class="hidden items-center md:flex">
-        {showToggleTheme && <ToggleTheme iconClass="w-5 h-5" />}
+        <!-- {showToggleTheme && <ToggleTheme iconClass="w-5 h-5" />} -->
+        <!-- {showToggleTheme && <ThemeToggle/>} -->
+
+        <div>
+          <ThemeToggle client:load/>
+        </div>
 
         <!-- {
           showRssFeed && (
