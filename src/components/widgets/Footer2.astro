@@ -1,0 +1,21 @@
+---
+import { Image } from "@astrojs/image/components";
+import logoImage from "src/assets/logos/ignite-logo-3.png";
+---
+
+
+<footer class="my-20">
+  <div class="flex flex-col justify-center place-items-center">
+    <div>
+      <p class="text-center text-sm text-slate-500">
+        Copyright © {new Date().getFullYear()} ignitedevs.
+      </p>
+      <p class="text-center text-xs text-slate-500 mt-1"></p>
+    </div>
+    <div>
+      <a href="/" class="text-lg">
+        <Image src={logoImage} alt="logo" loading="eager" format="avif" class:list={"w-auto h-[35px]"} />
+      </a>
+    </div>
+  </div>
+</footer>

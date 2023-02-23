@@ -3,7 +3,7 @@ import defaultImage from './assets/images/default.png';
 const CONFIG = {
   name: 'ignitedevs',
 
-  origin: 'https://astrowind.vercel.app',
+  origin: 'https://ignitedevs.com',
   basePathname: '/',
   trailingSlash: false,
 
@@ -24,8 +24,8 @@ const CONFIG = {
     timeZone: 'UTC',
   }),
 
-  googleAnalyticsId: false, // or "G-XXXXXXXXXX",
-  googleSiteVerificationId: 'orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M',
+  // googleAnalyticsId: false, // or "G-XXXXXXXXXX",
+  // googleSiteVerificationId: 'orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M',
 
   blog: {
     disabled: false,

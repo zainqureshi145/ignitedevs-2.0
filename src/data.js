@@ -58,7 +58,7 @@ export const headerData = {
     },
     {
       text: 'Contact',
-      href: '#',
+      href: '/contact',
     },
     // {
     //   text: 'Blog',
