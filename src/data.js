@@ -50,15 +50,15 @@ export const headerData = {
     // },
     {
       text: 'Technologies',
-      href: '#',
+      href: '/technologies',
     },
     {
       text: 'Portfolio',
-      href: '#',
+      href: '/portfolio',
     },
     {
       text: 'Contact',
-      href: '#',
+      href: '/contact',
     },
     // {
     //   text: 'Blog',
