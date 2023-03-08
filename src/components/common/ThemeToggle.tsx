@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { themeStore } from '~/nanostore/themeStore';
 
 const themes = ['light', 'dark'];
 
@@ -20,6 +21,8 @@ export default function ThemeToggle() {
     const t = theme === 'light' ? 'dark' : 'light';
     localStorage.setItem('theme', t);
     setTheme(t);
+    //Changes Nanostore
+    themeStore.set(t);
   };
 
   useEffect(() => {
