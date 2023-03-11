@@ -1,18 +1,25 @@
-
 <footer class="my-20">
   <div class="flex flex-col justify-center place-items-center">
     <div>
-      <p class="text-center text-sm text-slate-500">
+      <p class="text-center text-sm text-slate-800 dark:text-slate-100">
         Copyright © {new Date().getFullYear()} ignitedevs.
       </p>
-      <p class="text-center text-xs text-slate-500 mt-1"></p>
+      <p class="text-center text-xs text-slate-800 dark:text-slate-100 mt-1"></p>
     </div>
     <div>
-      <a href="/" class="text-lg">
+      <a href="/" class="text-lg" aria-label="logo">
         <div class="flex flex-row">
-          <img class="h-[30px] md:h-[40px] w-[auto] flex dark:hidden" src="/src/assets/logos/ignite-dark-transparent.png"/>
-          <img class="h-[30px] md:h-[40px] w-[auto] hidden dark:flex" src="/src/assets/logos/ignite-light-transparent.png"/>
-      </div>
+          <img
+            class="h-[30px] md:h-[40px] w-[auto] flex dark:hidden"
+            src="/src/assets/logos/ignite-dark-transparent.png"
+            alt="logo"
+          />
+          <img
+            class="h-[30px] md:h-[40px] w-[auto] hidden dark:flex"
+            src="/src/assets/logos/ignite-light-transparent.png"
+            alt="logo"
+          />
+        </div>
       </a>
     </div>
   </div>

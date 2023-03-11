@@ -45,6 +45,7 @@ export default function ThemeToggle() {
         const checked = t === theme;
         return (
           <button
+            aria-label="theme toggle button"
             key={t}
             className={`${
               // Button Toggle Settings

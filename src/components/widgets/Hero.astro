@@ -1,6 +1,6 @@
 ---
 import { Icon } from 'astro-icon';
-import { Picture } from '@astrojs/image/components';
+// import { Picture } from '@astrojs/image/components';
 
 interface CallToAction {
   text: string;
@@ -22,10 +22,11 @@ const {
   content = await Astro.slots.render('content'),
   callToAction = await Astro.slots.render('callToAction'),
   callToAction2 = await Astro.slots.render('callToAction2'),
-  image = await Astro.slots.render('image'),
+  // image = await Astro.slots.render('image'),
 } = Astro.props;
 ---
 
+<!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
 <section class="relative md:-mt-[76px]">
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
@@ -45,7 +46,7 @@ const {
           <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
             {
               callToAction && (
-                <div class="flex w-full sm:w-auto">
+                <div class="flex w-full mt-10 sm:w-auto">
                   {typeof callToAction === 'string' ? (
                     <Fragment set:html={callToAction} />
                   ) : (
@@ -84,26 +85,15 @@ const {
         {content && <Fragment set:html={content} />}
       </div>
       <div>
-        {
+        <!-- {
           image && (
-            <div class="relative m-auto max-w-5xl">
-              {typeof image === 'string' ? (
-                <Fragment set:html={image} />
-              ) : (
-                <Picture
-                  class="mx-auto rounded-md w-full"
-                  widths={[400, 768, 1024, 2040]}
-                  sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
-                  aspectRatio={1024 / 576}
-                  loading="eager"
-                  width={1024}
-                  height={576}
-                  {...image}
-                />
-              )}
+            // <div class="relative m-auto max-w-5xl">
+            // <div class="absolute -z-10 top-0 left-0 w-full m-auto">
+            <div class="absolute -z-10 top-0 opacity-50 h-3/4 w-full">
+              <lottie-player src="src/assets/lottie/hero.json" background="transparent" speed="1" loop autoplay />
             </div>
           )
-        }
+        } -->
       </div>
     </div>
   </div>

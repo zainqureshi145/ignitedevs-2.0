@@ -10,8 +10,10 @@ import compress from 'astro-compress';
 import { readingTimeRemarkPlugin } from './src/utils/frontmatter.mjs';
 import { SITE } from './src/config.mjs';
 import react from "@astrojs/react";
+import compressor from "astro-compressor";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const whenExternalScripts = (items = []) => SITE.googleAnalyticsId ? Array.isArray(items) ? items.map(item => item()) : [items()] : [];
+
 
 // https://astro.build/config
 export default defineConfig({
@@ -37,11 +39,11 @@ export default defineConfig({
     html: {
       removeAttributeQuotes: false
     },
-    img: false,
+    img: true,
     js: true,
-    svg: false,
+    svg: true,
     logger: 1
-  }), react()],
+  }), react(), compressor({ gzip: false, brotli: true })],
   vite: {
     resolve: {
       alias: {
