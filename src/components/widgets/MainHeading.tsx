@@ -32,7 +32,6 @@ const MainHeading = () => {
           color={color}
           animationDuration={7000}
           padding={20}
-          iterations={3}
           //getAnnotationObject={annotate}
         >
           {title}

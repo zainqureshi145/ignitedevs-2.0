@@ -33,8 +33,11 @@
   }
 }
 
+/* #header.scroll {
+  @apply shadow-md md:shadow-lg bg-white md:bg-white/80 md:backdrop-blur-sm dark:bg-slate-900 dark:md:bg-slate-900/80;
+} */
 #header.scroll {
-  @apply shadow-md md:shadow-lg bg-white md:bg-white/90 md:backdrop-blur-sm dark:bg-slate-900 dark:md:bg-slate-900/90;
+  @apply shadow-md bg-white/80 backdrop-blur-sm dark:bg-slate-900 dark:bg-slate-900/80;
 }
 
 .dropdown:hover .dropdown-menu {
