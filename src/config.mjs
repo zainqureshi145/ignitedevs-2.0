@@ -1,26 +1,19 @@
-// import defaultImage from './assets/images/default.png';
-
 const CONFIG = {
   name: 'Digitalization and Marketing Solutions',
-
   origin: 'https://ignitedevs.com',
   basePathname: '/',
   trailingSlash: false,
-
   title: 'ignitedevs',
   description:
     'Welcome to ignitedevs',
-
   defaultTheme: 'light', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
-
   language: 'en',
   textDirection: 'ltr',
-
   dateFormatter: new Intl.DateTimeFormat('en', {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
-    timeZone: 'GMT',
+    timeZone: 'UTC',
   }),
 };
 
