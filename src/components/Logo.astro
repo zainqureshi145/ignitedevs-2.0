@@ -1,26 +1,21 @@
+---
+export interface Props {
+  height: string;
+  width: string;
+}
+
+const { height, width } = Astro.props;
+---
+
 <div class="flex flex-row">
   <img
-    class="h-[50px] md:h-[90px] w-[auto] flex dark:hidden"
+    class:list={[height, width, 'flex', 'dark:hidden', 'md:h-[90px]']}
     src="/src/assets/logos/ignite-dark-transparent.png"
     alt="logo"
   />
   <img
-    class="h-[50px] md:h-[90px] w-[auto] hidden dark:flex"
+    class:list={[height, width, 'hidden', 'dark:flex', 'md:h-[90px]']}
     src="/src/assets/logos/ignite-light-transparent.png"
     alt="logo"
   />
 </div>
-
-<!-- <div class="flex flex-col">
-
-    <div class="flex flex-row justify-center text-3xl font-sans font-black dark:text-slate-200">
-        <p><div class="text-indigo-800 dark:text-indigo-500"><p>< </p></div>Ignite</p>
-    </div>
-    <div class=" mt-1 flex flex-row justify-start text-sm text-indigo-800 dark:text-indigo-500 font-bold">
-        <p>Software Solutions</p>
-    </div>
-    <div class="flex flex-row justify-center text-3xl font-sans font-black dark:text-slate-200">
-        <p>devs<div class="text-indigo-800 dark:text-indigo-500"><p> /></p></div></p>
-    </div>
-
-</div> -->
