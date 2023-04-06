@@ -18,9 +18,6 @@ const checkThemeColor = () => {
 
 const MainHeading = () => {
   checkThemeColor();
-  // const annotate = (annotation) => {
-  //   console.log('inside annotation callback...');
-  // };
 
   return (
     <div className="dark:text-white highlight p-10">
