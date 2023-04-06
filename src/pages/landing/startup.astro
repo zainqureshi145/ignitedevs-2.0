@@ -1,6 +1,5 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
 import Header from '~/components/widgets/Header.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
@@ -14,7 +13,7 @@ const meta = {
 
 <Layout {meta}>
   <Fragment slot="header">
-    <Header {...headerData} showRssFeed showToggleTheme position="left" />
+    <Header {...headerData} position="left" />
   </Fragment>
 
   <!-- Hero2 Widget ******************* -->

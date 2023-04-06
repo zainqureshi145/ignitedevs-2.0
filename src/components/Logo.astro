@@ -2,19 +2,20 @@
 export interface Props {
   height: string;
   width: string;
+  heightAdjust: string;
 }
 
-const { height, width } = Astro.props;
+const { height, width, heightAdjust } = Astro.props;
 ---
 
 <div class="flex flex-row">
   <img
-    class:list={[height, width, 'flex', 'dark:hidden', 'md:h-[90px]']}
+    class:list={[height, width, 'flex', 'dark:hidden', heightAdjust]}
     src="/src/assets/logos/ignite-dark-transparent.png"
     alt="logo"
   />
   <img
-    class:list={[height, width, 'hidden', 'dark:flex', 'md:h-[90px]']}
+    class:list={[height, width, 'hidden', 'dark:flex', heightAdjust]}
     src="/src/assets/logos/ignite-light-transparent.png"
     alt="logo"
   />
