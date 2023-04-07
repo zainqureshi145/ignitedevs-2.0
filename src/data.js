@@ -7,15 +7,15 @@ export const headerData = {
       links: [
         {
           text: 'Website Development',
-          href: getPermalink('/landing/saas'),
+          href: getPermalink('/landing/web-app'),
         },
         {
           text: 'Mobile Applications',
-          href: getPermalink('/landing/startup'),
+          href: getPermalink('/landing/mobile-app'),
         },
         {
-          text: 'SEO',
-          href: getPermalink('/landing/mobile-app'),
+          text: 'Marketing',
+          href: getPermalink('/landing/marketing'),
         },
       ],
     },
