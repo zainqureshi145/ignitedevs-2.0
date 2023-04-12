@@ -29,15 +29,22 @@
   }
 
   .btn-primary {
-    @apply font-semibold border border-white bg-blue-800 text-white hover:bg-blue-900 hover:border-blue-900 hover:text-white dark:text-white dark:bg-primary dark:border-slate-900 dark:hover:border-blue-900 dark:hover:bg-blue-900;
+    @apply font-semibold border border-white bg-gray-800 text-white hover:bg-gray-900 hover:border-blue-900 hover:text-white dark:text-white dark:bg-primary dark:border-slate-900 dark:hover:border-blue-900 dark:hover:bg-blue-900;
   }
 }
 
 /* #header.scroll {
   @apply shadow-md md:shadow-lg bg-white md:bg-white/80 md:backdrop-blur-sm dark:bg-slate-900 dark:md:bg-slate-900/80;
 } */
-#header.scroll {
-  @apply shadow-md bg-white/80 backdrop-blur-sm dark:bg-slate-900 dark:bg-slate-900/80;
+
+/* #header {
+  @apply shadow-md md:rounded-full bg-white/90 backdrop-blur-sm dark:bg-slate-900 dark:bg-slate-900/80;
+} */
+#header{
+  @apply shadow-md md:rounded-lg bg-white dark:bg-slate-700 md:bg-transparent/50 backdrop-blur-sm md:dark:bg-slate-300/10;
+}
+#header a:is(:link, :active).active{
+  @apply py-1 px-4 bg-white/20 rounded-lg ease-in
 }
 
 .dropdown:hover .dropdown-menu {

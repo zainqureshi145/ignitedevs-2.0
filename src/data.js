@@ -3,33 +3,24 @@ import { getPermalink } from './utils/permalinks';
 export const headerData = {
   links: [
     {
+      text: 'Intro',
+      href: getPermalink('/')
+    },
+    {
       text: 'Services',
-      links: [
-        {
-          text: 'Website Development',
-          href: getPermalink('/landing/web-app'),
-        },
-        {
-          text: 'Mobile Applications',
-          href: getPermalink('/landing/mobile-app'),
-        },
-        {
-          text: 'Marketing',
-          href: getPermalink('/landing/marketing'),
-        },
-      ],
+      href: getPermalink('/services')
     },
     {
       text: 'Technologies',
-      href: '/technologies',
+      href: getPermalink('/technologies'),
     },
     {
       text: 'Portfolio',
-      href: '/portfolio',
+      href: getPermalink('/portfolio'),
     },
     {
       text: 'Contact',
-      href: '/contact',
+      href: getPermalink('/contact'),
     },
   ],
 };

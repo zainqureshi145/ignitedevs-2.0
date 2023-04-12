@@ -1,7 +1,8 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+// import CallToAction from '~/components/widgets/CallToAction.astro';
 import Steps from '~/components/widgets/Steps.astro';
+import MainHeading from '~/components/widgets/MainHeading';
 
 const meta = {
   title: 'Web development',
@@ -10,7 +11,9 @@ const meta = {
 ---
 
 <Layout {meta}>
-  <!-- Steps Widget ****************** -->
+  <div class="container max-w-9xl mx-auto px-4 sm:px-6 py-10 md:py-20">
+    <MainHeading title="Web Development" headingH1="" headingP="" client:visible slot="title" />
+  </div>
 
   <Steps
     title="Get your dream website up and running in no time with AstroWind."
@@ -44,7 +47,7 @@ const meta = {
     }}
   />
 
-  <!-- CallToAction Widget *********** -->
+  <!-- CallToAction Widget ***********
 
   <CallToAction
     callToAction={{
@@ -61,5 +64,5 @@ const meta = {
       Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
       waste more time! :P
     </Fragment>
-  </CallToAction>
+  </CallToAction> -->
 </Layout>
