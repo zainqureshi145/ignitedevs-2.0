@@ -20,11 +20,11 @@ const MainHeading = ({ title, headingH1, headingP }) => {
 
   return (
     <div className="dark:text-white text-5xl md:text-7xl">
-      <h1>
+      <h1 className="mb-5">
         {headingH1}
         <p>{headingP}</p>
       </h1>
-      <div className="text-sky-800 font-libre italic p-5 dark:text-white md:mb-36">
+      <div className="text-sky-800 font-libre italic p-5 dark:text-white">
         <RoughNotation
           show={true}
           type="box"

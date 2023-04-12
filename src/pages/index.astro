@@ -12,18 +12,18 @@ const meta = {
   dontUseTitleTemplate: false,
 };
 
-const headingH1 = 'We create Digital ';
-const headingP = 'Products and Experiences';
+const headingH1 = 'We create';
+const headingP = 'Digital Products and Experiences';
 ---
 
 <Layout {meta}>
   <!-- Hero Widget ******************* -->
 
-  <div class="flex flex-col">
+  <div class="flex flex-col md:h-screen">
     <Hero>
       <MainHeading title="For People" headingH1={headingH1} headingP={headingP} client:visible slot="title" />
       <Fragment slot="subtitle">
-        <span class="sm:text-4xl text-xl"
+        <span class="sm:text-4xl text-xl text-black dark:text-slate-100"
           >We are a team of developers and designers with one goal: We think in solutions and combine design with
           innovative technologies & digital marketing. That's how we create unique digital experiences.</span
         >
