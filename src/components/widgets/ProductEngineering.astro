@@ -1,10 +1,11 @@
 ---
 import Hero from '~/components/widgets/Hero.astro';
 import MainHeading from '~/components/widgets/MainHeading';
+import ProductEngineeringDetailsCard from './ProductEngineeringDetailsCard';
 ---
 
 <section>
-  <div class="flex flex-row justify-center lg:h-[90vh]">
+  <div class="flex flex-col justify-center lg:h-screen">
     <Hero>
       <MainHeading title="Engineering" headingH1="Product" headingP="" client:visible slot="title" />
       <Fragment slot="subtitle">
@@ -16,5 +17,6 @@ import MainHeading from '~/components/widgets/MainHeading';
         >
       </Fragment>
     </Hero>
+    <!-- <div class="ml-72"><ProductEngineeringDetailsCard client:load /></div> -->
   </div>
 </section>

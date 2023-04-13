@@ -19,6 +19,6 @@ module.exports = withAnimations({
       },
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/typography'),require('tailwind-scrollbar-hide')],
   darkMode: 'class',
 });
