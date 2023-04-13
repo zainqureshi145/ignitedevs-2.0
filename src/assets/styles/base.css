@@ -14,9 +14,10 @@
   .bg-light {
     background-color: var(--aw-color-bg-page);
   }
+  
 
   .bg-dark {
-    @apply bg-slate-900;
+    @apply bg-zinc-900;
   }
 
   
@@ -41,10 +42,10 @@
   @apply shadow-md md:rounded-full bg-white/90 backdrop-blur-sm dark:bg-slate-900 dark:bg-slate-900/80;
 } */
 #header{
-  @apply shadow-md md:rounded-lg bg-white dark:bg-slate-700 md:bg-transparent/50 backdrop-blur-sm md:dark:bg-slate-300/10;
+  @apply shadow-md md:rounded-lg bg-white dark:bg-slate-700 md:bg-transparent/70 backdrop-blur-sm md:dark:bg-zinc-700/70;
 }
 #header a:is(:link, :active).active{
-  @apply py-1 px-4 bg-white/20 rounded-lg ease-in
+  @apply py-1 px-4 bg-transparent/90 rounded-lg border ease-in
 }
 
 .dropdown:hover .dropdown-menu {

@@ -1,70 +1,61 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
-// import CallToAction from '~/components/widgets/CallToAction.astro';
+import CustomerExperience from '~/components/widgets/CustomerExperience.astro';
+import ProductEngineering from '~/components/widgets/ProductEngineering.astro';
+import DigitalGrowth from '~/components/widgets/DigitalGrowth.astro';
+import Layout from '../layouts/PageLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 import Steps from '~/components/widgets/Steps.astro';
-import MainHeading from '~/components/widgets/MainHeading';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import { SITE } from '~/config.mjs';
 
 const meta = {
-  title: 'Web development',
-  dontUseTitleTemplate: true,
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: false,
 };
 ---
 
 <Layout {meta}>
-  <div
-    class="container max-w-9xl mx-auto px-4 sm:px-6 py-10 md:py-20 text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200"
-  >
-    <MainHeading title="Web Development" headingH1="" headingP="" client:visible slot="title" />
-  </div>
+  <CustomerExperience />
+  <ProductEngineering />
+  <DigitalGrowth />
 
-  <Steps
-    title="Get your dream web application up and running in no time."
+  <Steps2
+    title="Sed ac magna sit amet risus tristique interdum, at vel velit in hac habitasse platea dictumst."
+    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla. Praesent placerat enim ut ex tincidunt vehicula. Fusce sit amet dui tellus."
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Download</span>',
+        title: 'Responsive Elements',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla. Praesent placerat enim ut ex tincidunt vehicula.',
-        icon: 'tabler:package',
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</em>',
+        title: 'Flexible Team',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla.',
-        icon: 'tabler:letter-case',
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
       },
       {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
+        title: 'Ecologic Software',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla. Praesent placerat enim ut ex tincidunt vehicula. Fusce sit amet dui tellus.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
       },
     ]}
-    image={{
-      src: import('~/assets/images/creativity.jpg'),
-      alt: 'Steps image',
-    }}
   />
-
-  <!-- CallToAction Widget ***********
-
   <CallToAction
     callToAction={{
-      text: 'Get template',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:download',
+      text: 'Contact',
+      href: '/contact',
+      icon: 'icon-park-outline:arrow-right-up',
     }}
   >
     <Fragment slot="title">
-      Astro + <br class="block sm:hidden" /><span class="sm:whitespace-nowrap"> Tailwind CSS</span>
+      <span class="sm:whitespace-nowrap font-libre font-bold italic text-6xl text-sky-800 dark:text-gray-50"
+        >Contact Us</span
+      >
     </Fragment>
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      Do you have an awsome idea or a business you want to digitalize? Contact now to get started!
     </Fragment>
-  </CallToAction> -->
+  </CallToAction>
 </Layout>

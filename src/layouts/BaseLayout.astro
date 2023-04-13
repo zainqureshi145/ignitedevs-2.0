@@ -3,7 +3,6 @@ import '~/assets/styles/base.css';
 
 import MetaTags from '~/components/common/MetaTags.astro';
 import BasicScripts from '~/components/common/BasicScripts.astro';
-import Logo from '~/components/Logo.astro';
 
 import { MetaSEO } from '~/types';
 import { SITE } from '~/config.mjs';
@@ -22,6 +21,7 @@ const { language = 'en', textDirection = 'ltr' } = SITE;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <MetaTags {...meta} />
   </head>
 

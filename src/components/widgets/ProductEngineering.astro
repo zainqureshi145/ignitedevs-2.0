@@ -1,0 +1,20 @@
+---
+import Hero from '~/components/widgets/Hero.astro';
+import MainHeading from '~/components/widgets/MainHeading';
+---
+
+<section>
+  <div class="flex flex-row justify-center lg:h-[90vh]">
+    <Hero>
+      <MainHeading title="Engineering" headingH1="Product" headingP="" client:visible slot="title" />
+      <Fragment slot="subtitle">
+        <span class="sm:text-4xl text-xl text-black dark:text-slate-100"
+          >We design and develop digital products with one thing in mind: scalability. We start with a conception that
+          thinks about performance, usability and scalability of the application from the beginning. We co-design the
+          backend and frontend in agile manner. Once we create an MVP, it's a matter of continuous expansion and
+          improvement to deliver the final product. We know that software is always evolving, so we evolve with it.</span
+        >
+      </Fragment>
+    </Hero>
+  </div>
+</section>

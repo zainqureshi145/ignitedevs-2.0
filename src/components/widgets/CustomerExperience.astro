@@ -1,0 +1,18 @@
+---
+import Hero from '~/components/widgets/Hero.astro';
+import MainHeading from '~/components/widgets/MainHeading';
+---
+
+<section>
+  <div class="flex flex-row justify-center lg:h-[90vh]">
+    <Hero>
+      <MainHeading title="Experience" headingH1="Customer" headingP="" client:visible slot="title" />
+      <Fragment slot="subtitle">
+        <span class="sm:text-4xl text-xl text-black dark:text-slate-100"
+          >We create experiences that connect poeple with brands, products or other people. We research identities and
+          goals, requirements and functions, need and usability, and above all: customer experience.</span
+        >
+      </Fragment>
+    </Hero>
+  </div>
+</section>
