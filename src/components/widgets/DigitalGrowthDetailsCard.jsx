@@ -18,7 +18,7 @@ const DigitalGrowthDetailsCard = () => {
           <Card highlight="Marketing" title="Digital Marketing Strategy" />
           <Card highlight="Marketing" title="Data-driven Marketing" />
           <Card highlight="Marketing" title="Performance Marketing" />
-          <Card highlight="Marketing" title="Search Engine marketing" />
+          <Card highlight="Marketing" title="Search Engine Marketing" />
           <Card highlight="Marketing" title="Content Marketing" />
           <Card highlight="Marketing" title="Analytics + Monitoring" />
         </motion.div>

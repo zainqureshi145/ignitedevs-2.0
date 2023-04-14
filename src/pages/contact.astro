@@ -3,6 +3,7 @@ import { SITE } from '~/config.mjs';
 import Layout from '~/layouts/PageLayout.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
+import ContactForm from '~/components/widgets/ContactForm.astro';
 
 const meta = {
   title: SITE.title,
@@ -12,6 +13,29 @@ const meta = {
 ---
 
 <Layout {meta}>
+  <div>
+    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+      <div>
+        <h2 class="font-medium text-2xl text-black dark:text-gray-50">Contact Us</h2>
+        <p class="text-lg leading-relaxed text-black dark:text-gray-50 mt-3">
+          Do you have a project idea or have something to say? We are here to help. Fill up the form or send email or
+          call phone.
+        </p>
+        <div class="mt-5">
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <!-- <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" /> -->
+            <span></span>
+          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <!-- <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a href="mailto:info@queteksolutions.com">info@queteksolutions.com</a> -->
+          </div>
+        </div>
+      </div>
+      <div>
+        <ContactForm />
+      </div>
+    </div>
+  </div>
+
   <FAQs
     title="Frequently Asked Questions"
     subtitle="Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque. Morbi tincidunt lacus nec tortor scelerisque pulvinar."
