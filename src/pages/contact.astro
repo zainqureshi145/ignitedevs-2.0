@@ -1,7 +1,8 @@
 ---
 import { SITE } from '~/config.mjs';
 import Layout from '~/layouts/PageLayout.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import MainHeading from '~/components/widgets/MainHeading';
 import Stats from '~/components/widgets/Stats.astro';
 import ContactForm from '~/components/widgets/ContactForm.astro';
 
@@ -13,42 +14,34 @@ const meta = {
 ---
 
 <Layout {meta}>
-  <div>
-    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
-      <div>
-        <h2 class="font-medium text-2xl text-black dark:text-gray-50">Contact Us</h2>
-        <p class="text-lg leading-relaxed text-black dark:text-gray-50 mt-3">
-          Do you have a project idea or have something to say? We are here to help. Fill up the form or send email or
-          call phone.
-        </p>
-        <div class="mt-5">
-          <div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <!-- <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" /> -->
-            <span></span>
-          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <!-- <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a href="mailto:info@queteksolutions.com">info@queteksolutions.com</a> -->
-          </div>
-        </div>
-      </div>
-      <div>
-        <ContactForm />
-      </div>
+  <div class="flex flex-col justify-center">
+    <Hero>
+      <MainHeading title="Contact Us" headingH1="" headingP="" client:visible slot="title" />
+      <Fragment slot="subtitle">
+        <span class="flex flex-col justify-center text-2xl"
+          >Do you have a project idea or have something to say? We are here to help. Fill up the form or send email or
+          call phone.</span
+        >
+      </Fragment>
+    </Hero>
+    <div class="grid mx-[5%] lg:mx-[30%]">
+      <ContactForm />
     </div>
   </div>
 
-  <FAQs
+  <!-- <FAQs
     title="Frequently Asked Questions"
-    subtitle="Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque. Morbi tincidunt lacus nec tortor scelerisque pulvinar."
+    subtitle=""
     highlight="FAQs"
     items={[
       [
         {
-          question: 'What do I need to start?',
+          question: 'I have and idea/proposal, what do I need to start?',
           answer:
             'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
         },
         {
-          question: 'How to install the Astro + Tailwind CSS template?',
+          question: '',
           answer:
             "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.",
         },
@@ -76,16 +69,5 @@ const meta = {
         },
       ],
     ]}
-  />
-
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    items={[
-      { name: 'Downloads', value: '132K' },
-      { name: 'Stars', value: '24.8K' },
-      { name: 'Forks', value: '10.3K' },
-      { name: 'Users', value: '48.4K' },
-    ]}
-  />
+  /> -->
 </Layout>

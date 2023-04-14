@@ -38,12 +38,26 @@ const {
       </div>
     )
   }
-  <div class="grid grid-cols-2 row-gap-8 md:grid-cols-4">
+  <!-- <div class="grid grid-cols-2 row-gap-8 md:grid-cols-4">
     {
       items.map(({ name, value }) => (
         <div class="text-center md:border-r md:last:border-none dark:md:border-slate-500 mb-12 md:mb-0">
           <div class="text-[2.6rem] font-bold lg:text-5xl xl:text-6xl text-zinc-700 dark:text-primary dark:text-blue-600 font-heading">
             {value}
+          </div>
+          <p class="text-sm font-medium tracking-widest text-gray-800 dark:text-slate-400 uppercase lg:text-base">
+            {name}
+          </p>
+        </div>
+      ))
+    }
+  </div> -->
+  <div class="grid grid-cols-6 row-gap-8 mx-20">
+    {
+      items.map(({ name, value }) => (
+        <div class="text-center md:border-r md:last:border-none dark:md:border-slate-500 mb-12 md:mb-0">
+          <div class="text-[2.6rem] font-bold lg:text-5xl xl:text-6xl text-zinc-700 dark:text-primary dark:text-blue-600 font-heading">
+            <img src={value} alt="" />
           </div>
           <p class="text-sm font-medium tracking-widest text-gray-800 dark:text-slate-400 uppercase lg:text-base">
             {name}

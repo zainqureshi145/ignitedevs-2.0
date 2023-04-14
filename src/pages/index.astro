@@ -5,6 +5,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import MainHeading from '~/components/widgets/MainHeading';
+import Stats from '~/components/widgets/Stats.astro';
 
 const meta = {
   title: SITE.title,
@@ -99,5 +100,22 @@ const headingP = 'Digital Products and Experiences';
     ]}
   />
 
-  <!-- FAQs Widget ******************* -->
+  <div class="flex flex-col text-center justify-center items-center mt-10">
+    <Fragment slot="title">
+      <span class="sm:whitespace-nowrap font-bold text-3xl"
+        >Some of our<p class="font-libre italic text-sky-800 dark:text-slate-50">customers</p></span
+      >
+    </Fragment>
+  </div>
+  <!-- Stats Widget ****************** -->
+  <Stats
+    items={[
+      { name: 'burrrn!', value: '' },
+      { name: 'EnterInn', value: '24.8K' },
+      { name: 'rubato.no', value: '10.3K' },
+      { name: 'texans-kongsberg', value: '48.4K' },
+      { name: 'HOF New Zealand', value: '48.4K' },
+      { name: 'Petfoods Singapore', value: '48.4K' },
+    ]}
+  />
 </Layout>

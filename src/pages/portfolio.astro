@@ -1,9 +1,22 @@
 ---
-import Layout from "~/layouts/PageLayout.astro";
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from '~/config.mjs';
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
 ---
 
-<Layout>
-    <div>
-        <p>Portfolio</p>
-    </div>
+<Layout {meta}>
+  <div class="flex flex-col justify-center items-center">
+    <p>Portfolio</p>
+    <lottie-player
+      src="https://assets7.lottiefiles.com/packages/lf20_AQcLsD.json"
+      background="transparent"
+      speed="1"
+      style="width: 900px; height: 900px;"
+      loop
+      autoplay></lottie-player>
+  </div>
 </Layout>
