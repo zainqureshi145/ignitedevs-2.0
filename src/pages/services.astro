@@ -4,7 +4,6 @@ import ProductEngineering from '~/components/widgets/ProductEngineering.astro';
 import DigitalGrowth from '~/components/widgets/DigitalGrowth.astro';
 import Layout from '../layouts/PageLayout.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import Steps from '~/components/widgets/Steps.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import { SITE } from '~/config.mjs';
 
@@ -16,46 +15,48 @@ const meta = {
 ---
 
 <Layout {meta}>
-  <CustomerExperience />
-  <ProductEngineering />
-  <DigitalGrowth />
+  <div class="space-y-[10vh] lg:space-y-[30vh]">
+    <CustomerExperience />
+    <ProductEngineering />
+    <DigitalGrowth />
 
-  <Steps2
-    title="Sed ac magna sit amet risus tristique interdum, at vel velit in hac habitasse platea dictumst."
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla. Praesent placerat enim ut ex tincidunt vehicula. Fusce sit amet dui tellus."
-    items={[
-      {
-        title: 'Responsive Elements',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-      },
-      {
-        title: 'Flexible Team',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-      },
-      {
-        title: 'Ecologic Software',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-      },
-    ]}
-  />
-  <CallToAction
-    callToAction={{
-      text: 'Contact',
-      href: '/contact',
-      icon: 'icon-park-outline:arrow-right-up',
-    }}
-  >
-    <Fragment slot="title">
-      <span class="sm:whitespace-nowrap font-libre font-bold italic text-6xl text-sky-800 dark:text-gray-50"
-        >Contact Us</span
-      >
-    </Fragment>
+    <Steps2
+      title="Sed ac magna sit amet risus tristique interdum, at vel velit in hac habitasse platea dictumst."
+      subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla. Praesent placerat enim ut ex tincidunt vehicula. Fusce sit amet dui tellus."
+      items={[
+        {
+          title: 'Responsive Elements',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+        },
+        {
+          title: 'Flexible Team',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+        },
+        {
+          title: 'Ecologic Software',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+        },
+      ]}
+    />
+    <CallToAction
+      callToAction={{
+        text: 'Contact',
+        href: '/contact',
+        icon: 'icon-park-outline:arrow-right-up',
+      }}
+    >
+      <Fragment slot="title">
+        <span class="sm:whitespace-nowrap font-libre font-bold italic text-6xl text-sky-800 dark:text-gray-50"
+          >Contact Us</span
+        >
+      </Fragment>
 
-    <Fragment slot="subtitle">
-      Do you have an awsome idea or a business you want to digitalize? Contact now to get started!
-    </Fragment>
-  </CallToAction>
+      <Fragment slot="subtitle">
+        Do you have an awsome idea or a business you want to digitalize? Contact now to get started!
+      </Fragment>
+    </CallToAction>
+  </div>
 </Layout>

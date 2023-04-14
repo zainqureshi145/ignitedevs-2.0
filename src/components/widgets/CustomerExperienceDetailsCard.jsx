@@ -7,12 +7,14 @@ const CustomerExperienceDetailsCard = () => {
   const carousel = useRef();
 
   useEffect(() => {
-    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+    const multiplier = carousel.current.scrollWidth * 1;
+    setWidth(multiplier - carousel.current.offsetWidth);
+    console.log(multiplier, carousel.current.offsetWidth);
   }, []);
   return (
-    <div className="mx-[10%]">
-      <motion.div ref={carousel} whileTap={{ cursor: 'grabbing' }} className="flex cursor-grab">
-        <motion.div drag="x" dragConstraints={{ right: 0, left: -width }} className="flex max-w-8xl">
+    <div className="mx-[5%]">
+      <motion.div ref={carousel} whileTap={{ cursor: 'grabbing' }} className="flex cursor-grab overflow-hidden">
+        <motion.div drag="x" dragConstraints={{ right: 0, left: -width }} className="flex">
           <Card highlight="Design" title="Brand Strategy" />
           <Card highlight="Design" title="Customer Experience Design" />
           <Card highlight="Design" title="User Experience Design" />
