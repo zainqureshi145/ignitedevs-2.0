@@ -1,22 +1,15 @@
 ---
 export interface Props {
-  height: string;
-  width: string;
-  heightAdjust: string;
+  text_size: string;
 }
 
-const { height, width, heightAdjust } = Astro.props;
+const { text_size } = Astro.props;
 ---
 
-<div class="flex flex-row">
-  <img
-    class:list={[height, width, 'flex', 'dark:hidden', heightAdjust]}
-    src="/src/assets/logos/ignite-dark-transparent.png"
-    alt="logo"
-  />
-  <img
-    class:list={[height, width, 'hidden', 'dark:flex', heightAdjust]}
-    src="/src/assets/logos/ignite-light-transparent.png"
-    alt="logo"
-  />
+<div class:list={[text_size, 'py-5', 'px-5', 'flex', 'flex-row', 'font-bold', 'font-mono', 'text-sky-900']}>
+  <a href="/">
+    <span
+      >&lt;<span class="font-libre italic text-black dark:text-slate-300">&nbsp;ignitedevs&nbsp;</span>&#47;&gt;</span
+    >
+  </a>
 </div>
