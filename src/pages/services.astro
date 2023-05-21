@@ -3,7 +3,6 @@ import CustomerExperience from '~/components/widgets/CustomerExperience.astro';
 import ProductEngineering from '~/components/widgets/ProductEngineering.astro';
 import DigitalGrowth from '~/components/widgets/DigitalGrowth.astro';
 import Layout from '../layouts/PageLayout.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import { SITE } from '~/config.mjs';
 
@@ -41,22 +40,5 @@ const meta = {
         },
       ]}
     />
-    <CallToAction
-      callToAction={{
-        text: 'Contact',
-        href: '/contact',
-        icon: 'icon-park-outline:arrow-right-up',
-      }}
-    >
-      <Fragment slot="title">
-        <span class="sm:whitespace-nowrap font-bold text-6xl"
-          >Join us on this <p class="font-libre italic text-sky-800 dark:text-slate-50">exciting journey.</p></span
-        >
-      </Fragment>
-
-      <Fragment slot="subtitle">
-        Do you have an awsome idea or a business you want to digitalize? Contact now to get started!
-      </Fragment>
-    </CallToAction>
   </div>
 </Layout>

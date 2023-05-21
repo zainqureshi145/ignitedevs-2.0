@@ -1,0 +1,22 @@
+---
+import Hero from '~/components/widgets/Hero.astro';
+import MainHeading from '~/components/widgets/MainHeading';
+import EnterInnCard from './EnterInnCard';
+import TexansCard from './TexansCard';
+---
+
+<section>
+  <div class="flex flex-col justify-center">
+    <Hero>
+      <MainHeading title="Development" headingH1="Mobile" headingP="" client:visible slot="title" />
+      <Fragment slot="subtitle">
+        <span class="sm:text-4xl text-xl text-black dark:text-slate-100"
+          >We create hybrid and native mobile applications using cutting-edge technologies. Some of the technologies we
+          use are Flutter, React Native, iOS, Android, Lottie, and Rive Animations. We develop, maintain, and market
+          your idea and provide future updates as technology changes.</span
+        >
+      </Fragment>
+    </Hero>
+    <div class="w-full"><EnterInnCard client:load /> <TexansCard client:load /></div>
+  </div>
+</section>

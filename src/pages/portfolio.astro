@@ -1,22 +1,38 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import WebDev from '../components/widgets/WebDev.astro';
+import MobileDev from '../components/widgets/MobileDev.astro';
+import Layout from '../layouts/PageLayout.astro';
+import CallToAction from '../components/widgets/CallToAction.astro';
 import { SITE } from '~/config.mjs';
+
 const meta = {
   title: SITE.title,
   description: SITE.description,
-  dontUseTitleTemplate: true,
+  dontUseTitleTemplate: false,
 };
 ---
 
 <Layout {meta}>
-  <div class="flex flex-col justify-center items-center">
-    <p>Portfolio</p>
-    <lottie-player
-      src="https://assets7.lottiefiles.com/packages/lf20_AQcLsD.json"
-      background="transparent"
-      speed="1"
-      style="width: 900px; height: 900px;"
-      loop
-      autoplay></lottie-player>
+  <div class="space-y-[10vh] lg:space-y-[30vh]">
+    <WebDev />
+    <MobileDev />
+
+    <CallToAction
+      callToAction={{
+        text: 'Contact',
+        href: '/contact',
+        icon: 'icon-park-outline:arrow-right-up',
+      }}
+    >
+      <Fragment slot="title">
+        <span class="sm:whitespace-nowrap font-bold text-6xl"
+          >Join us on this <p class="font-libre italic text-sky-800 dark:text-slate-50">exciting journey.</p></span
+        >
+      </Fragment>
+
+      <Fragment slot="subtitle">
+        Do you have an awsome idea or a business you want to digitalize? Contact now to get started!
+      </Fragment>
+    </CallToAction>
   </div>
 </Layout>
