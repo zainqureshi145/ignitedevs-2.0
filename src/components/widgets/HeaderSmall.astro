@@ -54,6 +54,10 @@ const { links = [], actions = [], isSticky = false, position = 'center' } = Astr
       <div class="flex items-center md:hidden">
         <ToggleMenu />
       </div>
+      <!-- Toggle Theme Button At Top -->
+      <div class="flex justify-center sm:hidden">
+        <ThemeToggle client:visible />
+      </div>
     </div>
     <nav
       class="items-center w-full md:w-auto hidden md:flex text-black dark:text-white h-[calc(100vh-72px)] md:h-auto overflow-y-auto md:overflow-visible md:mx-5"
@@ -94,9 +98,9 @@ const { links = [], actions = [], isSticky = false, position = 'center' } = Astr
         }
       </ul>
       <!-- Toggle Theme For Small Screen -->
-      <div class="flex justify-center sm:hidden">
+      <!-- <div class="flex justify-center sm:hidden">
         <ThemeToggle client:visible />
-      </div>
+      </div> -->
     </nav>
     <div class:list={[{ '': position === 'left' }, 'md:self-center flex items-center md:mb-0']}>
       <div class="hidden items-center md:flex">

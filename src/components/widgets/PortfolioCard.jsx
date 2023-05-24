@@ -9,7 +9,7 @@ const PortfolioCard = ({ highlight, title, image }) => {
       <div className="flex flex-col justify-center">
         <img className="rounded-lg w-72 lg:h-[400px] lg:w-auto" draggable="false" src={image} alt={image} />
       </div>
-      <div className="ml-5 pb-5 text-xl lg:text-4xl font-bold text-center">
+      <div className="ml-5 pb-5 text-xl lg:text-2xl font-bold text-center">
         <h1>{title}</h1>
       </div>
     </motion.div>

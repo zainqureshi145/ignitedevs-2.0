@@ -22,7 +22,7 @@ const EnterInnCard = () => {
           />
           <MPortfolioCard
             highlight="EnterInn"
-            title="Inro Page"
+            title="Intro Page"
             image="src/assets/project-screenshots/enterinn/5.png"
           />
           <MPortfolioCard

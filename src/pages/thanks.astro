@@ -1,0 +1,30 @@
+---
+import Layout from '~/layouts/BaseLayout.astro';
+import { getHomePermalink } from '~/utils/permalinks';
+
+const title = `Thank You!`;
+---
+
+<Layout meta={{ title }}>
+  <section class="flex items-center h-full p-16">
+    <div class="container flex flex-col items-center justify-center px-5 mx-auto my-8">
+      <div class="max-w-md text-center">
+        <h2 class="mb-8 font-bold text-9xl">
+          <div class="flex flex-row justify-center">
+            <lottie-player
+              src="https://assets9.lottiefiles.com/packages/lf20_kdx6cani.json"
+              background="transparent"
+              speed="1"
+              style="width: 300px; height: 300px;"
+              loop
+              autoplay></lottie-player>
+          </div>
+        </h2>
+        <p class="mb-8 text-3xl font-semibold md:text-3xl">
+          Thank you for reaching out to us, we will get back to you asap!
+        </p>
+        <a rel="noopener noreferrer" href={getHomePermalink()} class="btn ml-4">Back to homepage</a>
+      </div>
+    </div>
+  </section>
+</Layout>
